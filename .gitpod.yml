@@ -1,5 +1,4 @@
---- 
-tasks: 
- - init: "export DEBUG=pw:api"
- command: "npm install playwright"
- command: "npm install"
+tasks:
+  - init: npm install
+    command: npm install playwright
+    command: export DEBUG=pw:api

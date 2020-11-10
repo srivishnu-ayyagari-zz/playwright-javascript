@@ -13,6 +13,8 @@ const playwright = require('playwright');
 
     // Selecting the page
     const page = await context.newPage();
+
+    // Test cases
     await page.goto('https://google.com/');
     await page.screenshot({ path: `screenshots/example-${browserType}.png` });
     await browser.close();

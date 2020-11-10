@@ -1,0 +1,4 @@
+tasks:
+  -init: npm install
+  command: npm install playwright
+  command: export DEBUG=pw:api

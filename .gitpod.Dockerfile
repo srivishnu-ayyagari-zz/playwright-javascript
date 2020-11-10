@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM gitpod/workspace-full
 
 # 1. Install node12
 RUN apt-get update && apt-get install -y curl && \

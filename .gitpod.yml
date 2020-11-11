@@ -2,4 +2,4 @@
 tasks: 
   - 
     command: "npm install"
-    init: "npm install playeright"
+    init: "npm install playwright"

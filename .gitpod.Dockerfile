@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-full-vnc:latest
 RUN sudo apt-get update
 # Install Cypress-base dependencies
 RUN sudo apt-get install -y \
@@ -16,6 +16,8 @@ RUN sudo apt-get install -y \
     libxtst6 \
     xauth \
     xvfb
-# Install Chrome
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN sudo dpkg -i google-chrome-stable_current_amd64.deb; sudo apt-get -fy install
+# Install Chromium
+RUN sudo apt-get update -q \
+    && sudo apt-get install -yq \
+    chromium-browser \
+    && sudo rm -rf /var/lib/apt/lists/*

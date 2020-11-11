@@ -16,6 +16,7 @@ RUN sudo apt-get install -y \
     libxtst6 \
     xauth \
     xvfb
+RUN sudo apt-get install libwebkit-dev
 # Install Chromium
 RUN sudo apt-get update -q \
     && sudo apt-get install -yq \

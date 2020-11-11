@@ -27,7 +27,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libatk-bridge2.0-0 \
     libepoxy0 \
     libgtk-3-0 \
-    libharfbuzz-icu0
+    libharfbuzz-icu0 \
+    libnss3\
+    libnspr4\
+    libatk1.0-0\
+    libatk-bridge2.0-0\
+    libcups2\
+    libdrm2\
+    libxkbcommon0\
+    libgtk-3-0\
+    libgbm1\
+    libatspi2.0-0
 
 # 3. Install gstreamer and plugins to support video playback in WebKit.
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -79,3 +89,5 @@ RUN su pwuser -c "mkdir /tmp/pw && cd /tmp/pw && npm init -y && \
 # 3. Symlink downloaded browsers for root user
 RUN mkdir /root/.cache/ && \
     ln -s /home/pwuser/.cache/ms-playwright/ /root/.cache/ms-playwright
+
+ 

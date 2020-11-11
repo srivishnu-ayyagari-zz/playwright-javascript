@@ -1,6 +1,4 @@
---- 
 tasks: 
-  - 
-    command: "docker run --rm -it playwright:localbuild /bin/bash"
+  -
     command: "npm install"
-    init: "npm install playwright"
+    init: "npm install playeright"

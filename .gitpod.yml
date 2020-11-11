@@ -1,7 +1,6 @@
 --- 
-image:
-  file: .gitpod.Dockerfile
 tasks: 
   - 
+    command: "docker run --rm -it playwright:localbuild /bin/bash"
     command: "npm install"
     init: "npm install playwright"
